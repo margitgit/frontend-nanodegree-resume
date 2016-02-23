@@ -19,19 +19,23 @@ h6 {
 }
 
 .education-entry {
-  padding: 0 2% ;
+  padding: 0 5% 1%;
+
+}
+
+.course-entry {
+  padding: 0 5% 1%;
 
 }
 
 .work-entry,
 .project-entry {
-  padding: 0 2% ;
-  
+  padding: 0 5%;
 }
 
 h1 {
   font-size: 40px;
-  color: #000;
+  color: rgb(157, 199, 242);
   line-height: 48px;
   display: inline;
 }
@@ -51,8 +55,6 @@ h3 {
   color: #000;
   line-height: 22px;
   text-align: center;
-  text-shadow: 1px 1px 1px #666;
-  
 }
 
 h4 {
@@ -60,7 +62,6 @@ h4 {
   font-size: 14px;
   color: #4a4a4a;
   line-height: 17px;
-  text-align: right;
 }
 
 h2,
@@ -99,10 +100,9 @@ p {
 a {
   color: #6A9ACB;
   text-decoration: none;
-  margin-top: 1%;
+  margin-top: 10px;
   display: block;
   text-shadow: 0px 1px 1px rgba(150, 150, 150, 1);
-  padding-top: 6px;
 }
 
 
@@ -114,55 +114,41 @@ a {
 }
 
 #skills-h3 {
-  color: #000;
+  color: #80bfff;
   display: none;
   padding-top: 3%;
 }
 
-#online-h3 {
-  color: #000;
-  display: block;
-  padding-top: 7%;
-}
-
-
 .orange {
-  background-color: rgb(147, 185, 224);
+  background-color: rgb(157, 199, 242);
 }
 
 .orange-text {
-  color: #426B94;
+  color: #80bfff;
  
 }
 
 .white-text {
   font-weight: bold;
-  color: #000;
+  color: #fff;
   
 }
 
 .gray {
-  background-color: #FFFFFF;
+  background-color: #f3f3f3;
   padding-bottom: 10px;
   clear:both;
 }
 
 .dark-gray {
-  /*background-color: rgb(26, 35, 47); */
-  /*border-top-color: rgb(147, 185, 224);*/
-  
+  background-color: rgb(26, 35, 47);
 }
 
 /* TODO: Replace with image later */
 #header {
   background-color: #536E93;
-  background: #536E93; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#536E93, #f3f3f3); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#536E93, #f3f3f3); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#536E93, #f3f3f3); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#536E93, #f3f3f3); /* Standard syntax (must be last) */
   margin-bottom: 5px;
-  
+  margin-bottom-color: #f3f3f3;
 }
 
 .flex-box {
@@ -176,13 +162,10 @@ a {
 
 .center-content {
   padding: 2.5% 5%;
-
 }
 
 ul {
   list-style-type: none;
-  font-weight: bold; 
-  
 }
 
 .biopic {
@@ -203,23 +186,6 @@ span {
 
 #lets-connect {
   text-align: center;
-  background-color: #536E93;
-  background: #536E93; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#f3f3f3, #536E93); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#f3f3f3, #536E93); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#f3f3f3, #536E93); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#f3f3f3, #536E93); /* Standard syntax (must be last) */
-}
-
-
-#lets-connect-inverse {
-  text-align: center;
-  background-color: #536E93;
-  background: #536E93; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#536E93, #f3f3f3); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#536E93, #f3f3f3); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#536E93, #f3f3f3); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#536E93, #f3f3f3); /* Standard syntax (must be last) */
 }
 
 /* Media queries to handle various device widths */
@@ -249,26 +215,15 @@ span {
 }
 
 #map {
-  display: none;
+  display: block;
   height: 100%;
   margin: 0 5%;
-  opacity: 0.8;
-
-
 }
 
 #mapDiv {
-  display: none;
-  background-color: rgba(150, 150, 150, 0.39);
-  height: 370px;
+  height: 400px;
   width: 100%;
   padding-bottom: 5%;
-  height: 400px;
-    background: #536E93; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#f3f3f3, #536E93); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#f3f3f3, #536E93); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#f3f3f3, #536E93); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#f3f3f3, #536E93); /* Standard syntax (must be last) */
 }
 
 @media only screen and (min-width: 750px) {
@@ -276,8 +231,4 @@ span {
   .biopic {
     display: block;
   }
-}
-
-hr {  
-    border-bottom-width: 3px;
 }

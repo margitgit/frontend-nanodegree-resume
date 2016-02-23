@@ -26,14 +26,15 @@ var bio = {
       "mobile":" 0032 484 439 204",
       "email":"margit.mikula@gmx.net",
       "github":"margitgit",
-      "location":"La Hulpe/Brussels"
+      "location":"La Hulpe/Brussels - BELGIUM"
    
    },
    "welcomeMessage":"",
    "skills":[  
-      "Front-end development (HTML, CSS, JavaScript, MDN-Mozilla Development Network, jQuery, JSON, node.js, gulp.js, Grunt, PhP, MySQL)", "Statistics (R, General Linear Model, Mixed Models)"
+      "Statistics (R, General Linear Model, Mixed Models)", "Front-end development (HTML, CSS, JavaScript)"
    ],
    "bioPic":"images/mm.jpg",
+   //"display":"display()"
 }
 
 function displayBio() {
@@ -55,7 +56,6 @@ var skill =0;
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
     var formattedcontactGeneric = formattedMobile+formattedEmail+formattedGithub+formattedLocation;
     $("#header").prepend(formattedcontactGeneric);
-    $("#footerContacts").append(formattedcontactGeneric);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     $("#header").prepend(formattedRole);
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -70,43 +70,31 @@ displayBio();
 
 var work = {  
    "jobs":[  
-       {  
-         //"logo_url":"", 
-         "employer":"KMO SPRL [http://k-mo.eu/]",
-         "title":"Front-end development for KMO clients",
-         "location" : "Brussels, Belgium",
-         "dates":"2015-2016",
-         "description":"Installation of WordPress, OrganicThemes, configuration of plugins (contactform-7, newsletter: MailPoet), translating design into code, HTML, CSS, PhP"
-      },
       {  
          //"logo_url":"",
          "employer":"King's College London",
          "title":"Data Scientist",
-         "location" : "London, UK",
          "dates":"2011-2015",
-         "description":"The work consisted of three parts (1) analysis of brain images from Magnetic Resonance Imaging, (2) analysis of RNA data from blood samples, and (3) analysis of protein data from blood samples. By combining these data with cognitive performance scores I predicted the individual cognitive decline slope in patients with Alzheimer's disease. I dealt with a number of statistical techniques such as Descriptive Statistics, charts and graphs, the Normal Distribution, the \u03C4-distribution, skewed distributions, detecting and removing outliers, correlation and regression, power and sample size calculations, and modelling mixed effect models with R. I am very familiar with the Weka collection of machine learning algorithms for data mining tasks. I applied these algorithms directly to my datasets. I used the R statistical computing software and the Weka toolsuite for data pre-processing, classification, regression, and visualization." 
+         "description":"The work consisted of three parts (1) analysis of brain images from Magnetic Resonance Imaging, (2) analysis of RNA data from blood samples, and (3) analysis of protein data from blood samples. By combining these data with cognitive performance scores I predicted the individual cognitive decline slope in patients with Alzheimer's disease. I dealt with a number of statistical techniques such as Descriptive Statistics, charts and graphs, the Normal Distribution, the t-distribution, skewed distributions, detecting and removing outliers, correlation and regression, and modelling mixed effect models with R. I am very familiar with the Weka collection of machine learning algorithms for data mining tasks. I applied the algorithms directly to my datasets. I used the R statistical computing software and the Weka toolsuite for data pre-processing, classification, regression, and visualization." 
       },
       {  
          //"logo_url":"", 
-         "employer":"Katholieke Universiteit Leuven",
-         "title":"Researcher -- Computational modelling for Tissue engineering",
-         "location" : "Leuven, Belgium",
+         "employer":"Katholike Universiteit Leuven",
+         "title":"Computational Modelling for Tissue engineering",
          "dates":"2008-2009",
          "description":"Software (C++) for mimicking cell behaviour (attachment, repulsion)"
       },
       {  
          //"logo_url":"",
          "employer":"Vrije Universiteit Brussel",
-         "title":"Researcher -- Computational modelling for virtual representation of the human body",
-         "location" : "Brussels, Belgium",
+         "title":"Computational Modelling for virtual representation of the human body",
          "dates":"2007-2008",
          "description":"Image annotation ontologies (Java, XML) for enabling collaboration between medical staff and help inspectors better highlight specific conditions"
       },
       {  
          //"logo_url":"",
          "employer":"University of Cologne",
-         "title":"Researcher -- Computational modelling with bioinformatics application",
-         "location" : "Cologne, Germany",
+         "title":"Computational Modelling with bioinformatics application",
          "dates":"2005-2006",
          "description":"CUPE Metabolic Pathway Editor (C++)"
       },
@@ -114,7 +102,6 @@ var work = {
          //"logo_url":"",
          "employer":"3 Vienna",
          "title":"Test Manager",
-         "location" : "Vienna, Austria",
          "dates":"2002-2003",
          "description":"Testing Strategy for mobile phone apps (Java)"
       },
@@ -122,7 +109,6 @@ var work = {
          //"logo_url":"",
          "employer":"WSM-WebstrategyManagement",
          "title":"Founder",
-         "location" : "Vienna, Austria",
          "dates":"1999-2002",
          "description":"Customer aquisition, frontend webdevelopment (HTML, CSS, PHP), webdesign (Fireworks), databases (mySQL)"
       }
@@ -144,8 +130,6 @@ function displayWork() {
     var formattedworkEmployerTitle = formattedworkEmployer+formattedworkTitle;    
     $(".work-entry:last").append(formattedworkEmployerTitle);
 
-    var formattedworkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-    $(".work-entry:last").append(formattedworkLocation);    
     var formattedworkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
     $(".work-entry:last").append(formattedworkDates);
     var formattedworkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description); 
@@ -163,36 +147,30 @@ var edu = {
         "degree" : "PhD",
         "dates" :  "2011-2015",
         "location" :  "King's College London"
-        //majors: doesn't exsit in Europaen system
-        //url: 
        },
        { 
         "name" : "Cognitive and Decision Sciences",
         "degree" : "MSc",
         "dates" :  "2009-2010",
         "location" :  "University College London"
-        //url: 
        },
        { 
         "name" : "Bioinformatics",
         "degree" : "MSc",
         "dates" :  "2005-2006",
         "location" :  "University of Cologene"
-        //url: 
        },
        { 
         "name" : "Computer Science, Communication-, and Information Management",
         "degree" : "Diplom-Informatiker",
         "dates" :  "2001-2005",
         "location" : "Fachhochschule Darmstadt"  
-        //url: 
        },
        { 
         "name" : "Commerce and Computer Science",
         "degree" : "Certificate for business",
         "dates" :  "1997-1999",
         "location" :  "Vienna Business College"
-        //url: 
        }
 
     ]
@@ -224,136 +202,100 @@ displayEdu();
 
 
 
-var online = {
+var online = {  
+   "courses":[  
 
-        "courses":[
        { 
-          "title" :"Front-end webdevelopment (Object-Oriented JavaScript, jQuery, JSON, node.js, gulp.js, Grunt, responsive design, performance optimisation)",
-          "school" :"Udacity",
-          "date" : "2015-16",
-		  "location" : ""
-          //"url" : ""          
+          "title" : "Front-end webdevelopment",
+          "school" : "Udacity",
+          "date" : "2015/16",
+          "url" : ""          
       },
+
       { 
-          "title":"R programming",
+          "title" : "R programming",
           "school" : "Coursera",
           "date" : "2014",
-		  "location" : ""
-          //"url" : ""          
+          "url" : ""          
       },
       {
           "title" : "How Viruses Cause Disease",
           "school" : "Coursera",
           "date" : "2014",
-		  "location" : ""
-          //"url" : ""
+          "url" : ""
       },
       {
           "title" : "Genes and the Human Condition (From Behavior to Biotechnology)",
           "school" : "Cousera",
           "date" : "2013",
-		  "location" : ""
-          //"url" : ""
+          "url" : ""
       },
       {
           "title" : "Virology I - How Viruses Work",
           "school" : "Coursera",
           "date" : "2013",
-		  "location" : ""
-          //"url" : ""
+          "url" : ""
       },
       {
           "title" : "Case-Based Introduction to Biostatistics",
           "school" : "Coursera",
           "date" : "2013",
-		  "location" : ""
-          //"url" : ""
+          "url" : ""
       },
       {
           "title" : "Vaccine Trials - Methods and Best Practices",
           "school" : "Coursera",
           "date" : "2013",
-		  "location" : ""
-          //"url" : ""
-      }
-  ]
+          "url" : ""
+      },
+      {   "title" : "",
+          "school" : "",
+          "date" : "",
+          "url" : ""
+      },
+      {
+
+          "title" : "",
+          "school" : "",
+          "date" : "",
+          "url" : ""
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+
+   ]
 }
 
-
-
+var course =0;
 function displayCourses() {
+  for (course in online.courses) 
+  {
+    // create new div for online experience
     $(".education-entry:last").append(HTMLonlineClasses);    
-    for (course in online.courses){
-      
     var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", online.courses[course].title);
-    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%",online.courses[course].school);
+    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", online.courses[course].school);
     var formattedOnlineTitleSchool = formattedOnlineTitle+formattedOnlineSchool;    // concat 
     $(".education-entry:last").append(formattedOnlineTitleSchool);
+
     var formattedOnlineDates = HTMLonlineDates.replace("%data%", online.courses[course].date);
     $(".education-entry:last").append(formattedOnlineDates);
-   }
-       
+    var formattedOnlineUrl = HTMLonlineURL.replace("%data%", online.courses[course].url);
+    (".education-entry:last").append(formattedOnlineUrl);
+    
   } 
+}
 
 displayCourses();
 
 
-
-function displayMap() {
-
-     $("#mapDiv").append(googleMap);
-
-}
-displayMap();
-
-
-
-function locationizer(work_obj) {
-
-  var locationArray = [];
-
-  for (job in work_obj.jobs) {
-      var newLocation = work_obj.jobs[job].location;
-      locationArray.push(newLocation);
-  } 
-  return locationArray;
-
-}
-
-console.log(locationizer(work));
-
-
-function inName(name) {
-
-    name = name.trim().split(" ");
-    console.log(name);
-    name[1] = name[1].toUpperCase();
-    name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-
-    return name [0] + " " + name[1];
-    
-    inName ("margit mikula") === ("Margit MIKULA"); 
-
-}
-
-
-//$("#main").append(internationalizeButton);
-
-formattedbioinName = inName(bio.name);
-var formattedName = HTMLheaderName.replace("%data%", formattedbioinName);
-   // $("#header").prepend(formattedName);
-
-
-
-$(document).click(function(loc) {
-   var x = loc.pageX;
-   var y = loc.pageY;
-
-  logClicks(x,y);  
-});
-
-function letsconnect() {
-
-    $("#lets-connect").prepend();
-}    
-letsconnect(); 
